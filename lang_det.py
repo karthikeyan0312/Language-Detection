@@ -10,14 +10,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB  #classifier is suitable for classification with discrete features
 
 st.title("Language Detection")
-path=r"E:\my python\language detection\Language Detection.csv"
 
 @st.cache
 def load_data():
+    path=r"/app/Language-Detection/Language Detection.csv"
     data = pd.read_csv(path)
     X = data["Text"]
     y = data["Language"]
-    pickl=pd.read_pickle(r"E:\my python\language detection\lang_detection.pkl")
+    pickl=pd.read_pickle(r"/app/Language-Detection/lang_detection.pkl")
 
     return (X,y,pickl)
 
