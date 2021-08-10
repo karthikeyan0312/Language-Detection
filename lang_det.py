@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import re  
 from sklearn.preprocessing import LabelEncoder 
-#from sklearn.feature_extraction.text import TfidfVectorizer as le
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB  #classifier is suitable for classification with discrete features
 
@@ -31,7 +30,6 @@ for text in X:
     text = re.sub(r'[[]]', ' ', text)   
     text = text.lower()          # converting the text to lower case
     data_list.append(text)       # appending to data_list
-    # tokenize a collection of text documents
 cv=CountVectorizer()
 X = cv.fit_transform(data_list).toarray()
 
