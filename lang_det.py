@@ -9,11 +9,11 @@ st.title("Language Detection")
 
 @st.cache
 def load_data():
-    path=r"/app/Language-Detection/LanguageDetection.csv"
+    path=r"/app/language-detection/LanguageDetection.csv"
     data = pd.read_csv(path)
     X = data["Text"]
     y = data["Language"]
-    pickl=pd.read_pickle(r"/app/Language-Detection/lang_detection.pkl")
+    pickl=pd.read_pickle(r"/app/language-detection/lang_detection.pkl")
 
     return (X,y,pickl)
 
