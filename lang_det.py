@@ -4,14 +4,12 @@ import pandas as pd
 import numpy as np
 import re  
 from sklearn.preprocessing import LabelEncoder 
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB  #classifier is suitable for classification with discrete features
 
 st.title("Language Detection")
 
 @st.cache
 def load_data():
-    path=r"/app/Language-Detection/Language Detection.csv"
+    path=r"/Language-Detection/Language Detection.csv"
     data = pd.read_csv(path)
     X = data["Text"]
     y = data["Language"]
