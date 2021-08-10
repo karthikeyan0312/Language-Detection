@@ -9,7 +9,7 @@ st.title("Language Detection")
 
 @st.cache
 def load_data():
-    path=r"/Language-Detection/Language Detection.csv"
+    path=r"/app/Language-Detection/LanguageDetection.csv"
     data = pd.read_csv(path)
     X = data["Text"]
     y = data["Language"]
