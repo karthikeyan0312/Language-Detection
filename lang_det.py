@@ -1,4 +1,3 @@
-import pickle
 import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer 
 import pandas as pd
