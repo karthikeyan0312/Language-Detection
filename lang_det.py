@@ -38,7 +38,7 @@ def predicts(text):
     lang = le.inverse_transform(lang)
     return lang[0]
 
-t=st.text_input("Enter the a sentence ")
-submit=st.button("hit me")
+t=st.text_input("Enter a sentence ")
+submit=st.button(" Predict ")
 if submit:
     st.write(predicts(t))    
