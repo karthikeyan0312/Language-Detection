@@ -39,6 +39,6 @@ def predicts(text):
     return lang[0]
 
 t=st.text_input("Enter a sentence ")
-submit=st.button(" Predict ")
+submit=st.button(" Detect ")
 if submit:
     st.write(predicts(t))    
